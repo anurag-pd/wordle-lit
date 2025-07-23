@@ -283,14 +283,21 @@ export class WordleGame extends LitElement {
       align-items: center;
       margin-top: 1.5em;
       user-select: none;
+      width: 100%;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .kb-row {
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
+      gap: 0.2em;
       margin-bottom: 0.2em;
     }
     .kb-key {
+      flex: 1 1 0;
       min-width: 2.2em;
       min-height: 2.2em;
       margin: 0 0.1em;
@@ -302,6 +309,7 @@ export class WordleGame extends LitElement {
       font-weight: bold;
       cursor: pointer;
       transition: background 0.2s, color 0.2s;
+      max-width: 3em;
     }
     .kb-key.correct {
       background: #6aaa64;
@@ -320,7 +328,9 @@ export class WordleGame extends LitElement {
       cursor: not-allowed;
     }
     .kb-key.wide {
+      flex: 2 1 0;
       min-width: 4.6em;
+      max-width: 6em;
     }
   `;
 }
